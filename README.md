@@ -1,1 +1,1 @@
-<h1>Repositorio de armazenamentos de Projectos</h1>
+<h1>Repositorio para armazenamentos de Projectos</h1>
