@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&display=swap');
+
+
 body,
 html {
-    /* background-image: url('../img/adobe.jpeg'); */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    height: 100%;
-
+    /* background-image: linear-gradient(#09203F, #537895); */
+   height: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
+   font-family: 'Roboto', sans-serif;
 }
 
 .font-h2-strong {
@@ -15,7 +16,6 @@ html {
     font-weight: 400;
     font-size: 24px;
     line-height: 31.68px;
-    font-family: "Lexend", sans-serif;
 }
 
 .font-text-large-1 {
@@ -40,7 +40,6 @@ html {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
-
 }
 
 .text-container {
@@ -60,6 +59,7 @@ html {
     color: #ffffff;
     font-family: "Inter", sans-serif;
     width: 296px;
+    height: 40px;
     font-size: 16px;
     cursor: pointer;
 
@@ -87,24 +87,39 @@ btn:hover {
     cursor: pointer;
 }
 
-.loader {
-    pointer-events: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #fff;
-    animation: an1 1s ease infinite;
-} 
+.error-border {
+    border: 2px solid red;
+  }  
 
-@keyframes an1 {
+.loader {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation .8s linear infinite;
+  }
+  
+  @keyframes rotation {
     0% {
-        transform: rotate(0turn);
+      transform: rotate(0deg);
     }
     100% {
-        transform: rotate(1turn);
+      transform: rotate(360deg);
     }
+  } 
+
+
+
+.key-circle {
+    background-color: transparent;
+    border: 2px dashed #ccc;
+    border-radius: 50%;
+    padding: 20px;
 }
+
 
 .svg-key {
     width: 62px;
@@ -134,12 +149,12 @@ dialog::backdrop {
     }
 }
 
-#otp-input {
+#pin-input {
     display: flex;
     column-gap: 8px;
 }
 
-#otp-input input {
+#pin-input input {
     text-align: center;
     padding: 10px 8px 10px 8px;
     border: 1px solid #adadad;
@@ -149,19 +164,19 @@ dialog::backdrop {
     width: 50px;
 }
 
-#otp-input input:focus {
+#pin-input input:focus {
     border: 1px solid #497e76;
 }
 
-#otp-input input:focus::placeholder {
+#pin-input input:focus::placeholder {
     color: transparent;
 }
 
-#otp-input input::-webkit-outer-spin-button,
-#otp-input input::-webkit-inner-spin-button {
+#pin-input input::-webkit-outer-spin-button,
+#pin-input input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-#otp-input input[type="number"] {
+#pin-input input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
 }

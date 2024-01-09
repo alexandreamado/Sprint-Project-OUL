@@ -9,25 +9,18 @@
   <body>
     <div class="main-content-container">
       <div class="text-container">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1"
-          stroke="currentColor"
-          data-slot="icon"
-          class="svg-key"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
-          />
-        </svg>
-        <div class="font-text-large-1">Digite o seu Pin</div>
+        <div class="key-circle">
+          <svg class="svg-key" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="#ccc" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+          </svg>
+        </div>
+        
+        <div class="font-text-large-1">
+          <h2>Digite o PIN</h2>
+        </div>
       </div>
 
-      <div id="otp-input" class="font-h2-strong">
+      <div id="pin-input" class="font-h2-strong">
         <input
           class="font-h2-strong"
           placeholder="*"
@@ -37,6 +30,7 @@
           max="9"
           autocomplete="no"
           pattern="\d*"
+          maxlength="1"
         />
         <input
           class="font-h2-strong"
@@ -47,6 +41,7 @@
           max="9"
           autocomplete="no"
           pattern="\d*"
+          maxlength="1"
         />
         <input
           class="font-h2-strong"
@@ -57,6 +52,7 @@
           max="9"
           autocomplete="no"
           pattern="\d*"
+          maxlength="1"
         />
         <input
           class="font-h2-strong"
@@ -67,6 +63,7 @@
           max="9"
           autocomplete="no"
           pattern="\d*"
+          maxlength="1"
         />
       </div>
 
@@ -76,15 +73,23 @@
 
 
       <dialog>
-        <h2>Verificando meu PIN</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-          consectetur sed nihil qui et laboriosam explicabo aliquam voluptatibus
-          perspiciatis rerum voluptatum id hic corrupti est vero, adipisci,
-          quibusdam dolore alias.
-        </p>
+        <p>Pin Correcto</p>
 
-        <button class="close">Fechar</button>
+        <button class="close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </dialog> 
+      
+      <dialog class="dialog-input">
+        <h2>Por favor Preencha todos os campos</h2>
+        <button class="close-modal close">Fechar</button>
+      </dialog> 
+
+      <dialog class="dialog-incorrect">
+        <h2>PIN Incorrecto</h2>
+        <button class="close-error close">Fechar</button>
       </dialog>
 
     </div>
