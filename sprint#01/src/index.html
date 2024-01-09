@@ -72,26 +72,45 @@
     </button>
 
 
-      <dialog>
-        <p>Pin Correcto</p>
-
+      <dialog class="dialog-loggin">
         <button class="close">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
           </svg>
         </button>
+
+        <div>
+          <p>🎉</p>
+          <p>Parabéns você digitou o <strong>PIN</strong> Correcto</p>
+        </div>
+      </dialog>  
+
+      <dialog class="dialog-loggin dialog-input">
+        <button class="close-modal close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div>
+          <p>❗</p>
+          <p>Por favor, Preencha todos os campos</p>
+        </div>
       </dialog> 
       
-      <dialog class="dialog-input">
-        <h2>Por favor Preencha todos os campos</h2>
-        <button class="close-modal close">Fechar</button>
+      <dialog class="dialog-loggin dialog-incorrect">
+        <button class="close-error close">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <div>
+          <p>❌</p>
+          <p><strong>PIN</strong> Incorrecto</p>
+          <span>Dica: 8️-9-9-4</span>
+        </div>
       </dialog> 
-
-      <dialog class="dialog-incorrect">
-        <h2>PIN Incorrecto</h2>
-        <button class="close-error close">Fechar</button>
-      </dialog>
-
     </div>
     <script src="script/app.js"></script>
   </body>
