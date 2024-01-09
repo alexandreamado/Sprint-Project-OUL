@@ -31,14 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Verificação se o PIN inserido é maior ou menor que o correto, fornecendo feedback
     if (userInput > pinCorrect && userInput < 2000) {
-      pinWarning.innerHTML = `<small style="text-decoration: underline">Número Maior: ${userInput}
-      , O Proximo valor deve ser Menor</small>`;
+      pinWarning.innerHTML = `<small style="font-size: 14px">Voce digitou um numero maior, O Proximo valor deve ser Menor</small>`;
     } else if(userInput > pinCorrect || userInput >= 2000) {
-      pinWarning.innerHTML = `<small style="text-decoration: underline">Número Muito Maior,: ${userInput}
-      , O proximo valor deve ser muito Menor</small>`;
+      pinWarning.innerHTML = `<small style="font-size: 14px">Voce digitou um numero Muito Maior, O proximo valor deve ser muito Menor</small>`;
     }else if(userInput < pinCorrect){
-      pinWarning.innerHTML = `<small style="text-decoration: underline">Número Muito Menor,: ${userInput}
-      , O proximo valor deve ser Maior</small>`;
+      pinWarning.innerHTML = `<small style="font-size: 14px">Número Muito Menor, O proximo valor deve ser Maior</small>`;
     }
 
     // Verificação se todos os campos foram preenchidos
